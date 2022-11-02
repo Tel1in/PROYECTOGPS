@@ -1,12 +1,11 @@
 import React from 'react';
 import PacienteForm from './PacientesForm';
-import { firebase } from '../firebase-config';
+import { db } from '../firebase-config';
 const PacienteList =()=>
 {
-    const bd = firebase.firestore
-    const addOrEditPaciente=(PacObject)=>{
-        console.log('PacObject')
-        
+    const addOrEditPaciente= async(PacObject)=>{
+        console.log(PacObject)
+        await db.collection('Pacientes').doc().set(PacObject)        
     }
     return <div>
         <PacienteForm addOrEditPaciente={addOrEditPaciente}/>
