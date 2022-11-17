@@ -3,11 +3,13 @@ import React , {useState} from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
 import  profileImg from '../assets/images/profileData.svg'
+import Nav2 from './Nav2'
+import BarraL from './BarraL'
 
 
 function UserD() {
 
-    const { register, handleSubmit, errors } = useForm();
+    const { register, handleSubmit,  } = useForm();
     const onSubmit = (data) => {};
     const [editInput, setEditInput] = useState(false);
     
@@ -20,7 +22,9 @@ function UserD() {
       }
     return (
     <Content>
+        <Nav2 />
         <main>
+           <BarraL /> 
             <section>
                  <h2>INFORMACION DENTISTA</h2>
                  <form onSubmit={handleSubmit(onSubmit)}>
@@ -167,6 +171,7 @@ const Content= styled.div`
                 margin: auto;
             }
         }   
+        
      }
   }
 

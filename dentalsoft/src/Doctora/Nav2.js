@@ -4,7 +4,7 @@ import "./nav.css"
 import styled from "styled-components"
 
 
-function NavBar() {
+function Nav2() {
   const [clicked , setClicked] = useState(false)
   const handleClick = () => {
     setClicked(!clicked)
@@ -14,9 +14,10 @@ function NavBar() {
       <Navar>
             <h2 className="navar_h2">DentalSoft</h2> 
             <div className={`links ${clicked ? 'active' : ''}`}>
-              <a  href="/">Inicio</a>
-              <a  href="/Login">Login</a>
-              <a  href='/'>Citas</a>
+              <a  href="/">Cerrar Sesion</a>
+              <a  href="/Registrar">Registrarse</a>
+              <a  href='/dashboard/UserD'>Perfil</a>
+              <a  href='/dashboard/CitasD'>Citas</a>
             </div>
             <div className="burgger" >
               <BButton clicked={clicked} handleClick={handleClick}/>
@@ -27,7 +28,7 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default Nav2
 
 
 const Navar = styled.nav`
@@ -75,7 +76,7 @@ const Navar = styled.nav`
 
   .links.active{
     width: 100%;
-    display: flex;
+    display: block;
     position: absolute;
     margin-left: auto;
     margin-right: auto;

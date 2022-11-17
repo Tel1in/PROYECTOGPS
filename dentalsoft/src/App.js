@@ -5,6 +5,7 @@ import Inicio from "./login/Inicio";
 import Registrar from "./login/Registrar";
 import CitasD from "./Doctora/CitasD";
 import UserD from "./Doctora/UserD"
+import Expediente from "./Doctora/Expediente";
 
 function App(){
   return(
@@ -16,6 +17,7 @@ function App(){
             <Route path="/Registrar" element={<Registrar />}/>
             <Route path="/dashboard/CitasD" element={<CitasD />}/>
             <Route path="/dashboard/UserD" element={<UserD />}/>
+            <Route path="/dashboard/Exp" element={<Expediente />}/>
           </Routes>
         </Router>
       </div>     
